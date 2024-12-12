@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+{
+   double rad_dom = 5.0;
+   double rad_ink = 4.0;
+   double pi = 3.1415926;
+   double volume_dom = (4.0/3.0) * pi * rad_dom * rad_dom * rad_dom;
+   double volume_ink = (4.0/3.0) * pi * rad_ink * rad_ink * rad_ink;
+   
+   double vse_volume_dom = volume_dom * 10;
+   double vse_volume_ink = volume_ink * 12;
+   
+   double num_ink = vse_volume_dom/volume_ink;
+   
+   printf ("Obyem odnogo dom egg: %.2f kub sm\n", volume_dom);
+   printf ("Obyem odnogo ink egg: %.2f kub sm\n", volume_ink);
+   printf ("10 dom egg = %.2f ink egg\n", num_ink);
+   return 0;
+}
