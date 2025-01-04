@@ -1,0 +1,17 @@
+print("Введи координаты точки A:")
+x_a=int(input())
+y_a=int(input())
+print("Координаты точки A:","(",x_a,",",y_a,")")
+print("Введи координаты точки B:")
+x_b=int(input())
+y_b=int(input())
+print("Координаты точки B:","(",x_b,",",y_b,")")
+print("Введи координаты точки C:")
+x_c=int(input())
+y_c=int(input())
+print("Координаты всех точек:\n"
+"A:","(",x_a,",",y_a,")\n"
+"B:","(",x_b,",",y_b,")\n"
+"C:","(",x_c,",",y_c,")")
+ploshad=0.5*(x_a*(y_b-y_c)+x_b*(y_c-y_a)+x_c*(y_a-y_b))
+print("Площадь треугольника:",abs(ploshad))
