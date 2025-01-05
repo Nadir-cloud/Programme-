@@ -1,0 +1,14 @@
+def upor_rad(matrica):   #upor_rad - число упорядоченных рядов
+    chislo = 0
+    for rad in matrica:
+        if all(rad[i] <= rad[i + 1] for i in range(len(rad) - 1)):      #rad - ряд матрицы
+            chislo += 1
+    return chislo
+
+matrica = [
+    [1, 2, 3],
+    [3, 2, 1],
+    [1, 2, 4]
+]
+otvet = upor_rad(matrica)
+print("Количество строк, упорядоченных по возрастанию:", otvet)
