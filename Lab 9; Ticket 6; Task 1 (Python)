@@ -1,0 +1,7 @@
+def otvet_z(a, b):
+    z = min(a, 3 * b) * min(2 * a - b, 2 * b)
+    return z
+
+a = int(input("Введите значение для a:"))
+b = int(input("Введите значение для b:"))
+print("Значение z:", otvet_z(a,b))
