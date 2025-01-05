@@ -1,0 +1,14 @@
+def prime_factors(n):
+    factors = []
+    delitel = 2  
+
+    while n > 1:
+        while n % delitel == 0:  
+            factors.append(delitel) 
+            n //= delitel
+        delitel += 1 
+
+    return factors
+
+chislo = int(input("Введите число для разложения на простые множители: "))
+print("Простые множители числа:",prime_factors(chislo))
