@@ -1,0 +1,13 @@
+def prost(chislo):
+    if chislo < 2:
+        return False
+    for n in range(2, chislo):
+        if chislo % n == 0:
+            return False
+    return True
+
+chislo = int(input("Введите число: "))
+if prost(chislo):
+    print("Число",chislo, "является простым.")
+else:
+    print("Число",chislo, "не является простым.")
