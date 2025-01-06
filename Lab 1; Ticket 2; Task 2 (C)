@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    double a,b,c,obyem,ploshad,ugol;
+    printf("Введите длины сторон параллелипипеда:");
+    scanf("%lf %lf %lf", &a,&b,&c);
+    obyem = a*b*c;
+    ploshad = 2*(a*b+b*c+a*c);
+    ugol = 90.0;
+    printf("Объем: %lf\n",obyem);
+    printf("Площадь поверхности: %lf\n",ploshad);
+    printf("Угол: %lf\n",ugol);
+    return 0;
+}
