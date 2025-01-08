@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <float.h>
+#include <math.h>
+
+double function(double x) {
+    return 3 * x * x + x - 4;
+}
+
+int main() {
+    double x, y, a, b, h = 0.1;
+    double min_value = DBL_MAX, max_value = -DBL_MAX;
+
+    printf("Введите чему равняется a: ");
+    scanf("%lf", &a);
+    printf("Введите чему равняется b: ");
+    scanf("%lf", &b);
+
+    for (x = a; x <= b; x += h) {
+        y = function(x);
+        if (y < min_value) {
+            min_value = y;
+        }
+        if (y > max_value) {
+            max_value = y;
+        }
+    }
+
+    printf("Наименьшее значение функции: %.2lf\n", min_value);
+    printf("Наибольшее значение функции: %.2lf\n", max_value);
+
+    return 0;
+}
