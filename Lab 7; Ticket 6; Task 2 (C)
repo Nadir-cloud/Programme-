@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int countIncreasingSegments(int arr[], int n) {
+    int count = 0;
+    for (int i = 0; i < n - 1; i++) {
+        if (arr[i] < arr[i + 1]) {
+            count++;
+            while (i < n - 1 && arr[i] < arr[i + 1]) {
+                i++;
+            }
+        }
+    }
+    return count;
+}
+
+int main() {
+    int arr[] = {1, 2, 2, 3, 4, 1, 5, 6, 7, 2};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int result = countIncreasingSegments(arr, n);
+    printf("Количество участков с возрастающими элементами: %d\n", result);
+    return 0;
+}
