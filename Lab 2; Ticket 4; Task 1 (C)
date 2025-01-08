@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int number, a;
+    printf("Введите целое число: ");
+    scanf("%d", &number);
+    printf("Введите число a: ");
+    scanf("%d", &a);
+
+    int p = 1;
+    int t = number;
+
+    while (t > 0) {         
+        int digit = t % 10;    
+        p *= digit;
+        t /= 10;
+    }
+
+    if (p % a == 0) {    
+        printf("Произведение цифр числа %d кратно %d\n", number, a);
+    } else {
+        printf("Произведение цифр числа %d не кратно %d\n", number, a);
+    }
+
+    return 0;
+}
