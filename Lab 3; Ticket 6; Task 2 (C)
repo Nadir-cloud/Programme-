@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int year;
+    printf("Введите год:");
+    scanf("%d",&year);
+    if (year >= 4500) {
+        printf("Катархей\n");
+    } else if (year >= 3500) {
+        printf("Архей\n");
+    } else if (year >= 2500) {
+        printf("Протерозой\n");
+    } else if (year >= 534) {
+        printf("Палеозой\n");
+    } else if (year >= 248) {
+        printf("Мезозой\n");
+    } else if (year >= 65) {
+        printf("Кайнозой\n");
+    } else {
+        printf("Неизвестно\n");
+    }
+    return 0;
+}
